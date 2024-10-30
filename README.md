@@ -100,7 +100,7 @@ Activities are fetched using the Github API and displayed in the terminal
 3. Run the image
 
    ```
-   docker --name <your_container_name> -d -p 3000 -e GITHUB_TOKEN=<your_github_access_token> ryankaleligabriel/github-activity-cli <your_github_username> <event_type>(optional)
+   docker run --name <your_container_name> -d -p 3000 -e GITHUB_TOKEN=<your_github_access_token> ryankaleligabriel/github-activity-cli <your_github_username> <event_type>(optional)
    ```
 
 4. Check for your output
