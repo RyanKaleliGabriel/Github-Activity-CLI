@@ -11,8 +11,9 @@
 - [Usage](#usage)
   - [Installation](#installation)
   - [Example Commands](#example-commands)
+  - [Using Docker](#using-docker)
   - [Expected Output](#expected-output)
-  - [Error Handling](#error-handling)
+- [Error Handling](#error-handling)
 
 ## Take Aways
 
@@ -41,6 +42,7 @@ Activities are fetched using the Github API and displayed in the terminal
 ## Stack
 
 - Node Js
+- Docker
 
 ## Usage
 
@@ -81,6 +83,32 @@ Activities are fetched using the Github API and displayed in the terminal
    ```bash
     node --env-file=.env index.js ryankaleligabriel PushEvent
    ```
+
+### Using Docker
+1. Pull the image from docker hub
+
+   ```
+   docker pull ryankaleligabriel/github-activity-cli
+   ```
+
+2. Build the image
+
+   ```
+   docker build -t ryankaleligabriel/github-acitvity-cli .
+   ```
+
+3. Run the image
+
+   ```
+   docker --name <your_container_name> -d -p 3000 -e GITHUB_TOKEN=<your_github_access_token> ryankaleligabriel/github-activity-cli <your_github_username> <event_type>(optional)
+   ```
+
+4. Check for your output
+
+   ```
+   docker logs <your_container_name>
+   ```
+
 
 ### Expected Output
 
