@@ -46,32 +46,31 @@ Activities are fetched using the Github API and displayed in the terminal
 
 ### Installation
 
-1.Clone the repository
+1. Clone the repository
 
-```bash
-git clone https://github.com/your-username/github-activity-cli.git
-cd github-activity-cli
-```
+   ```bash
+   git clone https://github.com/your-username/github-activity-cli.git
+   cd github-activity-cli
+   ```
 
 2. Set Environment Variables: The github API requires authentication for certain request. To avoid rate limits, you can use a personal Github access token. Create a .env file and add the your access token.
 
-```bash
-GITHUB_TOKEN=<your_github_token>
-```
+   ```bash
+   GITHUB_TOKEN=<your_github_token>
+   ```
 
-3.  Running the CLI: Compile the typecript file (index.ts) then call it with the required arguements.
+3. Running the CLI: Compile the typecript file (index.ts) then call it with the required arguements.
 
-        ```bash
-        tsc index.ts
-        node --env-file=.env index.js <username> [event-type]
-        ```
-
-    - <username> (required): The GitHub username whose recent activity you want to fetch.
+    ```bash
+    tsc index.ts
+    node --env-file=.env index.js <username> [event-type]
+    ```
+    - [username] (required): The GitHub username whose recent activity you want to fetch.
     - [event-type] (optional): Filter by the type of event (e.g., PushEvent, ForkEvent, etc.).
 
 ### Example Commands
 
-1. Basic Fetch(No Event Filter): To fetch all recent activities for a user
+1. Basic Fetch (No Event Filter): To fetch all recent activities for a user
 
    ```bash
     node --env-file=.env index.js ryankaleligabriel
