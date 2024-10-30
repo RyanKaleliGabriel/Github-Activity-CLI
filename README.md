@@ -14,6 +14,7 @@
   - [Using Docker](#using-docker)
   - [Expected Output](#expected-output)
 - [Error Handling](#error-handling)
+- [Project URL](#project-url)
 
 ## Take Aways
 
@@ -121,3 +122,6 @@ Recent Github activities for ryankaleligabriel
 ## Error Handling
 
 If there are issues such as invalid username, rate limit issues, or network problems, the CLI will display appropriate error messages.
+
+## Project URL
+https://roadmap.sh/projects/github-user-activity
